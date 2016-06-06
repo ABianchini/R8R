@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     int width;
-    int r8 = 0;
+    int r8ing = 0;
     TextView fiveText;
     TextView fourText;
     TextView threeText;
