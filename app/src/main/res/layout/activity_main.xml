@@ -12,7 +12,7 @@
         android:id="@+id/editText"
         android:layout_gravity="center_horizontal"
         android:paddingTop="16dp"
-        android:textSize="24dp"
+        android:textSize="24sp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"/>
 
@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:text="-5"
                 android:id="@+id/textViewNegFive"
-                android:textSize="36dp"
+                android:textSize="36sp"
                 android:textStyle="normal"
                 android:onClick="clickNegFive"/>
             <TextView
@@ -52,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:text="-4"
                 android:id="@+id/textViewNegFour"
-                android:textSize="36dp"
+                android:textSize="36sp"
                 android:textStyle="normal"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:text="-3"
                 android:id="@+id/textViewNegThree"
-                android:textSize="36dp"
+                android:textSize="36sp"
                 android:textStyle="normal"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:text="-2"
                 android:id="@+id/textViewNegTwo"
-                android:textSize="36dp"
+                android:textSize="36sp"
                 android:textStyle="normal"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
@@ -82,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:text="-1"
                 android:id="@+id/textViewNegOne"
-                android:textSize="36dp"
+                android:textSize="36sp"
                 android:textStyle="normal"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
@@ -92,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:text="0"
                 android:id="@+id/textViewZero"
-                android:textSize="36dp"
+                android:textSize="36sp"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:textStyle="normal"
@@ -102,7 +102,7 @@
                 android:layout_height="wrap_content"
                 android:text="1"
                 android:id="@+id/textViewOne"
-                android:textSize="36dp"
+                android:textSize="36sp"
                 android:textStyle="normal"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
@@ -112,7 +112,7 @@
                 android:layout_height="wrap_content"
                 android:text="2"
                 android:id="@+id/textViewTwo"
-                android:textSize="36dp"
+                android:textSize="36sp"
                 android:textStyle="normal"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
@@ -122,7 +122,7 @@
                 android:layout_height="wrap_content"
                 android:text="3"
                 android:id="@+id/textViewThree"
-                android:textSize="36dp"
+                android:textSize="36sp"
                 android:textStyle="normal"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
@@ -132,7 +132,7 @@
                 android:layout_height="wrap_content"
                 android:text="4"
                 android:id="@+id/textViewFour"
-                android:textSize="36dp"
+                android:textSize="36sp"
                 android:textStyle="normal"
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
@@ -142,7 +142,7 @@
                 android:layout_height="wrap_content"
                 android:text="5"
                 android:id="@+id/textViewFive"
-                android:textSize="36dp"
+                android:textSize="36sp"
                 android:textStyle="normal"
                 android:onClick="clickFive"/>
 
@@ -154,7 +154,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView2"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/ic_opacity_black_24dp" />
+        android:src="@drawable/ic_in_not_black_24dp" />
 
     <EditText
         android:paddingTop="16dp"
@@ -163,7 +163,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editText2"
-        android:textSize="24dp"
+        android:textSize="24sp"
         android:hint="Why" />
 
 </LinearLayout>
