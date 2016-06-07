@@ -6,8 +6,6 @@ import android.content.res.Resources;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.View;
@@ -168,6 +166,10 @@ public class MainActivity extends AppCompatActivity {
         whatEdit.setText("");
         whyEdit.setText("");
         scrollRater.smoothScrollTo(zeroText.getLeft() + (zeroText.getWidth() - width)/2,0);
+    }
+
+    public void clickGoToR8S(View view) {
+
     }
 
     public void clickFive(View view) {
