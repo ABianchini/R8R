@@ -1,6 +1,8 @@
 package com.animationbureau.r8r;
 
+import android.app.ActivityOptions;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Handler;
@@ -168,8 +170,17 @@ public class MainActivity extends AppCompatActivity {
         scrollRater.smoothScrollTo(zeroText.getLeft() + (zeroText.getWidth() - width)/2,0);
     }
 
-    public void clickGoToR8S(View view) {
+    public void clickSaveR8(View view) {
 
+    }
+
+    public void clickGoToR8S(View view) {
+//        startActivity(new Intent(this, ListActivity.class));
+//        overridePendingTransition(R.anim.list_anim_enter,R.anim.main_anim);
+        Intent intent = new Intent(MainActivity.this,ListActivity.class);
+        Bundle bundle = ActivityOptions.makeCustomAnimation(this,R.anim.list_anim_enter,R.anim.main_anim).toBundle();
+//        Bundle bundle = ActivityOptions.makeCustomAnimation(getApplicationContext(),R.anim.list_anim_enter,R.anim.main_anim).toBundle();
+        startActivity(intent,bundle);
     }
 
     public void clickFive(View view) {
