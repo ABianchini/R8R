@@ -23,11 +23,11 @@
         </activity>
 
         <activity
-            android:name="com.animationbureau.r8r.ListActivity">
-            <!--android:parentActivityName="com.animationbureau.r8r.MainActivity">-->
-            <!--<meta-data-->
-                <!--android:name="android.support.PARENT_ACTIVITY"-->
-                <!--android:value="com.animationbureau.r8r.MainActivity" />-->
+            android:name="com.animationbureau.r8r.ListActivity"
+            android:parentActivityName="com.animationbureau.r8r.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.animationbureau.r8r.MainActivity" />
         </activity>
     </application>
 
