@@ -2,5 +2,22 @@
     <string name="app_name">R8R</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="action_settings">Settings</string>
-    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="what_string">What</string>
+    <string name="clear_all_string">Clear All</string>
+    <string name="selector_top_string">Selector Top</string>
+    <string name="neg_five_string">-5</string>
+    <string name="neg_four_string">-4</string>
+    <string name="neg_three_string">-3</string>
+    <string name="neg_two_string">-2</string>
+    <string name="neg_one_string">-1</string>
+    <string name="zero_string">0</string>
+    <string name="one_string">1</string>
+    <string name="two_string">2</string>
+    <string name="three_string">3</string>
+    <string name="four_string">4</string>
+    <string name="five_string">5</string>
+    <string name="why_string">Why</string>
+    <string name="selector_bottom_string">Selector Bottom</string>
+    <string name="save_string">SAVE</string>
+    <string name="R8S_string">R8S</string>
 </resources>

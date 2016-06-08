@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,7 +18,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:hint="What"
+            android:hint="@string/what_string"
             android:ems="10"
             android:id="@+id/editTextWhat"
             android:layout_gravity="center_horizontal"
@@ -26,6 +27,7 @@
 
         <ImageView
             android:paddingTop="5dp"
+            android:contentDescription="@string/clear_all_string"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/clearAll"
@@ -38,6 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
+        android:contentDescription="@string/selector_top_string"
         android:layout_gravity="center_horizontal"
         android:src="@drawable/ic_turned_in_not_black_24dp" />
 
@@ -60,7 +63,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-5"
+                android:text="@string/neg_five_string"
                 android:id="@+id/textViewNegFive"
                 android:textSize="36sp"
                 android:textStyle="normal"
@@ -68,7 +71,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-4"
+                android:text="@string/neg_four_string"
                 android:id="@+id/textViewNegFour"
                 android:textSize="36sp"
                 android:textStyle="normal"
@@ -78,7 +81,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-3"
+                android:text="@string/neg_three_string"
                 android:id="@+id/textViewNegThree"
                 android:textSize="36sp"
                 android:textStyle="normal"
@@ -88,7 +91,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-2"
+                android:text="@string/neg_two_string"
                 android:id="@+id/textViewNegTwo"
                 android:textSize="36sp"
                 android:textStyle="normal"
@@ -98,7 +101,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-1"
+                android:text="@string/neg_one_string"
                 android:id="@+id/textViewNegOne"
                 android:textSize="36sp"
                 android:textStyle="normal"
@@ -108,7 +111,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
+                android:text="@string/zero_string"
                 android:id="@+id/textViewZero"
                 android:textSize="36sp"
                 android:paddingLeft="16dp"
@@ -118,7 +121,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1"
+                android:text="@string/one_string"
                 android:id="@+id/textViewOne"
                 android:textSize="36sp"
                 android:textStyle="normal"
@@ -128,7 +131,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2"
+                android:text="@string/two_string"
                 android:id="@+id/textViewTwo"
                 android:textSize="36sp"
                 android:textStyle="normal"
@@ -138,7 +141,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3"
+                android:text="@string/three_string"
                 android:id="@+id/textViewThree"
                 android:textSize="36sp"
                 android:textStyle="normal"
@@ -148,7 +151,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4"
+                android:text="@string/four_string"
                 android:id="@+id/textViewFour"
                 android:textSize="36sp"
                 android:textStyle="normal"
@@ -158,7 +161,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5"
+                android:text="@string/five_string"
                 android:id="@+id/textViewFive"
                 android:textSize="36sp"
                 android:textStyle="normal"
@@ -172,7 +175,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView2"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/ic_in_not_black_24dp" />
+        android:src="@drawable/ic_in_not_black_24dp"
+        android:contentDescription="@string/selector_bottom_string"/>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -187,7 +191,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/editTextWhy"
             android:textSize="24sp"
-            android:hint="Why" />
+            android:hint="@string/why_string" />
 
     </LinearLayout>
     <LinearLayout
@@ -200,22 +204,27 @@
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="SAVE"
-            android:textSize="36dp"
+            android:text="@string/save_string"
+            android:textSize="36sp"
             android:id="@+id/buttonSave"
             android:layout_gravity="bottom"
             android:layout_weight="1"
-            android:onClick="clickSaveR8"/>
+            style="?android:attr/buttonBarButtonStyle"
+            android:onClick="clickSaveR8"
+            android:textColor="#000000"
+            tools:ignore="NestedWeights" />
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="R8S"
-            android:textSize="36dp"
+            android:text="@string/R8S_string"
+            android:textSize="36sp"
             android:id="@+id/buttonGoToR8S"
             android:layout_gravity="bottom"
             android:layout_weight="1"
-            android:onClick="clickGoToR8S"/>
+            style="?android:attr/buttonBarButtonStyle"
+            android:onClick="clickGoToR8S"
+            android:textColor="#000000" />
 
     </LinearLayout>
 </LinearLayout>

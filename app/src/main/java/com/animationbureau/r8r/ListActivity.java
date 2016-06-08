@@ -1,6 +1,5 @@
 package com.animationbureau.r8r;
 
-import android.app.ActivityOptions;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
