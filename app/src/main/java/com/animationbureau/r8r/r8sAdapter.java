@@ -6,13 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 
-
-/**
- * Created by anima on 6/8/2016.
- */
 public class r8sAdapter extends ArrayAdapter<R8s> {
     public r8sAdapter(Context context, ArrayList<R8s> r8s) {
         super(context, 0, r8s);

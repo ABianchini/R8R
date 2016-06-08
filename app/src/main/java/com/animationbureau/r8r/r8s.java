@@ -41,6 +41,7 @@ public class R8s {
     public void setWhat(String what) {
         this._what = what;
     }
+
     public int getr8() {
         return this._r8;
     }
@@ -48,6 +49,7 @@ public class R8s {
     public void setr8(int r8) {
         this._r8 = r8;
     }
+
     public String getWhy() {
         return this._why;
     }

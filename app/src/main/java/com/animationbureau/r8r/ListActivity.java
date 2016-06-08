@@ -2,8 +2,15 @@ package com.animationbureau.r8r;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 
 public class ListActivity extends AppCompatActivity {
@@ -12,8 +19,11 @@ public class ListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.list_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("R8S");
 
-        ArrayList<R8s> r8sList = new ArrayList<R8s>();
+        final ArrayList<R8s> r8sList = new ArrayList<R8s>();
 
         R8s r8s1 = new R8s();
         r8s1.setID(1);
@@ -31,16 +41,33 @@ public class ListActivity extends AppCompatActivity {
         r8sAdapter adapter = new r8sAdapter(this,r8sList);
         ListView listView = (ListView) findViewById(R.id.list_view);
         listView.setAdapter(adapter);
-        //TODO on click of list item
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                R8s r8s = r8sList.get(position);
+                Toast toast = Toast.makeText(getApplicationContext(), r8s.getWhy(), Toast.LENGTH_SHORT);
+                toast.show();
+            }
+        });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.list_menu,menu);
+        return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        //TODO create "delete all for database" and "reload list"
+
         switch (item.getItemId()) {
             case android.R.id.home:
                 // app icon in action bar clicked; goto parent activity.
                 this.finish();
+                return true;
+            case R.id.deleteR8s:
+                //TODO create "delete all for database" and "reload list"
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
