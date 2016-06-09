@@ -33,7 +33,6 @@ public class ListActivity extends AppCompatActivity {
         final DatabaseHandler db = new DatabaseHandler(this);
 
         final ArrayList<R8s> r8sList = db.getAllR8s();
-        //TODO grabable scroll bar
         Collections.reverse(r8sList);
         r8sAdapter adapter = new r8sAdapter(this,r8sList);
         ListView listView = (ListView) findViewById(R.id.list_view);
