@@ -27,7 +27,7 @@
         <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:inputType="textCapWords"
+            android:inputType="textCapSentences"
             android:hint="@string/what_string"
             android:ems="10"
             android:id="@+id/editTextWhat"
@@ -46,13 +46,13 @@
 
     </LinearLayout>
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:contentDescription="@string/selector_top_string"
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/ic_turned_in_not_black_24dp" />
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/imageView"-->
+        <!--android:contentDescription="@string/selector_top_string"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:src="@drawable/ic_turned_in_not_black_24dp" />-->
 
     <HorizontalScrollView
         android:layout_width="wrap_content"
@@ -194,16 +194,19 @@
         android:layout_gravity="center_vertical"
         android:layout_weight="1"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp" >
-
-        <EditText
-            android:paddingTop="24dp"
+        android:paddingRight="10dp"
+        android:paddingTop="24dp" >
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/editTextWhy"
-            android:textSize="24sp"
-            android:hint="@string/why_string" />
-
+            android:layout_height="match_parent">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextWhy"
+                android:textSize="24sp"
+                android:inputType="textCapSentences|textMultiLine|textShortMessage"
+                android:hint="@string/why_string" />
+        </ScrollView>
     </LinearLayout>
     <View
         android:layout_width="match_parent"
@@ -221,7 +224,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/save_string"
-            android:textSize="36sp"
+            android:textSize="24sp"
             android:id="@+id/buttonSave"
             android:layout_gravity="bottom"
             android:layout_weight="1"
@@ -240,7 +243,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/R8S_string"
-            android:textSize="36sp"
+            android:textSize="24sp"
             android:id="@+id/buttonGoToR8S"
             android:layout_gravity="bottom"
             android:layout_weight="1"

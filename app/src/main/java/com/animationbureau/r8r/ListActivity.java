@@ -1,5 +1,7 @@
 package com.animationbureau.r8r;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -9,11 +11,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.TextView;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class ListActivity extends AppCompatActivity {
+    String whatS = "";
+    String whyS = "";
+    int r8ing = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +28,12 @@ public class ListActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.list_toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle("R8S");
-        //TODO add up button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        DatabaseHandler db = new DatabaseHandler(this);
+        final DatabaseHandler db = new DatabaseHandler(this);
 
         final ArrayList<R8s> r8sList = db.getAllR8s();
-
+        //TODO grabable scroll bar
         Collections.reverse(r8sList);
         r8sAdapter adapter = new r8sAdapter(this,r8sList);
         ListView listView = (ListView) findViewById(R.id.list_view);
@@ -35,12 +41,42 @@ public class ListActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                R8s r8s = r8sList.get(position);
-                //TODO add dialog box with details
-                Toast toast = Toast.makeText(getApplicationContext(), r8s.getWhy(), Toast.LENGTH_SHORT);
-                toast.show();
+                final R8s r8s = r8sList.get(position);
+                detailsDialog(r8s);
             }
         });
+    }
+
+    public void detailsDialog(final R8s r8s) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        final DatabaseHandler db = new DatabaseHandler(this);
+
+        builder.setTitle(r8s.getWhat());
+        builder.setMessage(r8s.getr8()+": "+r8s.getWhy());
+        builder.setPositiveButton("Done", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                dialog.cancel();
+            }
+        });
+        builder.setNegativeButton("Delete", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                db.deleteR8s(r8s);
+
+                final ArrayList<R8s> r8sList = db.getAllR8s();
+                final r8sAdapter adapter = new r8sAdapter(getApplicationContext(),r8sList);
+                Collections.reverse(r8sList);
+                final ListView listView = (ListView) findViewById(R.id.list_view);
+                listView.setAdapter(adapter);
+                dialog.cancel();
+            }
+        });
+        AlertDialog r8ingDetails = builder.create();
+        r8ingDetails.show();
+        r8ingDetails.getWindow().getAttributes();
+        TextView tvTitle = (TextView) r8ingDetails.findViewById(android.R.id.title);
+        TextView tvMessage = (TextView) r8ingDetails.findViewById(android.R.id.message);
+//        tvTitle.setTextSize(24);
+        tvMessage.setTextSize(24);
     }
 
     @Override
@@ -58,16 +94,27 @@ public class ListActivity extends AppCompatActivity {
                 this.finish();
                 return true;
             case R.id.deleteR8s:
-                DatabaseHandler db = new DatabaseHandler(this);
-                db.deleteAllR8s();
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                final DatabaseHandler db = new DatabaseHandler(this);
 
-                final ArrayList<R8s> r8sList = db.getAllR8s();
-                Collections.reverse(r8sList);
-                r8sAdapter adapter = new r8sAdapter(this,r8sList);
-                ListView listView = (ListView) findViewById(R.id.list_view);
-                listView.setAdapter(adapter);
-
+                builder.setTitle("Confirm Delete");
+                builder.setMessage("Are you sure you want to delete all of your R8S?");
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        db.deleteAllR8s();
+                        finish();
+                        dialog.cancel();
+                    }
+                });
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+                AlertDialog r8ingDetails = builder.create();
+                r8ingDetails.show();
                 return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }

@@ -80,6 +80,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 r8sList.add(r8s);
             } while (cursor.moveToNext());
         }
+        db.close();
         return r8sList;
     }
 

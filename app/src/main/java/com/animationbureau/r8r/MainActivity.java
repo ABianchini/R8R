@@ -1,20 +1,26 @@
+//TODO make all this shit pretty, colors and all
 package com.animationbureau.r8r;
 
 import android.app.ActivityOptions;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Handler;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.HorizontalScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
@@ -83,6 +89,25 @@ public class MainActivity extends AppCompatActivity {
         r8ing = sharedPref.getInt("r8ingStored",0);
         whatEdit.setText(whatS);
         whyEdit.setText(whyS);
+        if (sharedPref.getBoolean("firstBoot",true)) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Welcome to R8R!");
+            builder.setMessage("Thanks for stopping by. Just type something you'd like to rate, click a R8ing, and give a reason.\nFeel free to browse through your old R8S as well.");
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    dialog.cancel();
+                }
+            });
+            builder.setNegativeButton("Why?", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    dialog.cancel();
+                }
+            });
+            AlertDialog firstDialog = builder.create();
+            firstDialog.show();
+            sharedPref.edit().putBoolean("firstBoot",false).apply();
+        }
+
 
         Handler h = new Handler();
         h.postDelayed(new Runnable() {
@@ -164,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
             case 5:     x = fiveText.getLeft() + (fiveText.getWidth() - width)/2;
                         break;
-        }
+        }//TODO read r8ing from scroll position, maybe
         scrollRater.smoothScrollTo(x,0);
     }
 
@@ -174,10 +199,10 @@ public class MainActivity extends AppCompatActivity {
         whyEdit.setText("");
         scrollRater.smoothScrollTo(zeroText.getLeft() + (zeroText.getWidth() - width)/2,0);
     }
-//TODO have save and r8s buttons rise with keyboard, maybe
+    //TODO add a post button and all that FB shit
     public void clickSaveR8(View view) {
         Calendar c = Calendar.getInstance();
-        String dateSaved = Integer.toString(c.get(Calendar.MONTH))+"/"+Integer.toString(c.get(Calendar.DAY_OF_MONTH))+"/"+Integer.toString(c.get(Calendar.YEAR));
+        String dateSaved = Integer.toString(c.get(Calendar.MONTH)+1)+"/"+Integer.toString(c.get(Calendar.DAY_OF_MONTH))+"/"+Integer.toString(c.get(Calendar.YEAR));
         whatS = whatEdit.getText().toString();
         whyS = whyEdit.getText().toString();
         R8s r8s = new R8s();
@@ -189,6 +214,9 @@ public class MainActivity extends AppCompatActivity {
         DatabaseHandler db = new DatabaseHandler(this);
         db.addR8s(r8s);
 
+        InputMethodManager mgr = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        mgr.hideSoftInputFromWindow(whyEdit.getWindowToken(), 0);
+        mgr.hideSoftInputFromWindow(whatEdit.getWindowToken(), 0);
         r8ing = 0;
         whatEdit.setText("");
         whyEdit.setText("");
