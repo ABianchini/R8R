@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -72,9 +73,7 @@ public class ListActivity extends AppCompatActivity {
         AlertDialog r8ingDetails = builder.create();
         r8ingDetails.show();
         r8ingDetails.getWindow().getAttributes();
-        TextView tvTitle = (TextView) r8ingDetails.findViewById(android.R.id.title);
         TextView tvMessage = (TextView) r8ingDetails.findViewById(android.R.id.message);
-//        tvTitle.setTextSize(24);
         tvMessage.setTextSize(24);
     }
 

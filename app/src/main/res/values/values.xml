@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_text_default_material_light">#d6d7d7</color>
+    <color name="primary_dark_material_light">#851919</color>
+    <color name="primary_material_light_now">#a23636</color>
+    <color name="primary_dark_material_light_now">#751111</color>
+    <color name="primary_text_default_material_light_now">#dec3c3c3</color>
+</resources>

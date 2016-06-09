@@ -1,4 +1,5 @@
-//TODO make all this shit pretty, colors and all
+//TODO make all this shit pretty, colors and all (figure out this theme shit)
+//TODO add swipe gesture detection to go to R8S
 package com.animationbureau.r8r;
 
 import android.app.ActivityOptions;
@@ -20,7 +21,6 @@ import android.widget.EditText;
 import android.widget.HorizontalScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
@@ -100,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
             });
             builder.setNegativeButton("Why?", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {
+                    Toast.makeText(getApplicationContext(),"Why not?",Toast.LENGTH_LONG).show();
                     dialog.cancel();
                 }
             });

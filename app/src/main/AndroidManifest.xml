@@ -12,8 +12,9 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name="com.animationbureau.r8r.MainActivity">
+        android:theme="@style/r8rTheme">
+        <activity android:name="com.animationbureau.r8r.MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,7 +25,8 @@
 
         <activity
             android:name="com.animationbureau.r8r.ListActivity"
-            android:parentActivityName="com.animationbureau.r8r.MainActivity">
+            android:parentActivityName="com.animationbureau.r8r.MainActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.animationbureau.r8r.MainActivity" />
