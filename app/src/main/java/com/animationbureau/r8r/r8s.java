@@ -8,22 +8,25 @@ public class R8s {
     String _what;
     int _r8;
     String _why;
+    String _date;
 
     public R8s() {
 
     }
 
-    public R8s(int id, String what, int r8, String why) {
+    public R8s(int id, String what, int r8, String why, String date) {
         this._id = id;
         this._what = what;
         this._r8 = r8;
         this._why = why;
+        this._date = date;
     }
 
-    public R8s(String what, int r8, String why) {
+    public R8s(String what, int r8, String why, String date) {
         this._what = what;
         this._r8 = r8;
         this._why = why;
+        this._date = date;
     }
 
     public int getID() {
@@ -56,5 +59,12 @@ public class R8s {
 
     public void setWhy(String why) {
         this._why = why;
+    }
+
+    public String getDate() {
+        return this._date;
+    }
+    public void setDate(String date) {
+        this._date = date;
     }
 }

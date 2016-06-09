@@ -15,12 +15,14 @@
             android:id="@+id/tvWhat"
             android:text="What"
             android:textStyle="bold"
-            android:textSize="24sp"/>
+            android:textSize="24sp"
+            android:textColor="#333333" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tvDate"
-            android:text="Date" />
+            android:text="Date"
+            android:textColor="#080808" />
     </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
@@ -28,6 +30,7 @@
         android:id="@+id/tvR8"
         android:textSize="36sp"
         android:textStyle="bold"
-        android:text="R8" />
+        android:text="R8"
+        android:textColor="#4d4d4d" />
 
 </LinearLayout>

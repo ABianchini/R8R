@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.HorizontalScrollView;
 import android.widget.TextView;
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -173,17 +174,30 @@ public class MainActivity extends AppCompatActivity {
         whyEdit.setText("");
         scrollRater.smoothScrollTo(zeroText.getLeft() + (zeroText.getWidth() - width)/2,0);
     }
-
+//TODO have save and r8s buttons rise with keyboard, maybe
     public void clickSaveR8(View view) {
+        Calendar c = Calendar.getInstance();
+        String dateSaved = Integer.toString(c.get(Calendar.MONTH))+"/"+Integer.toString(c.get(Calendar.DAY_OF_MONTH))+"/"+Integer.toString(c.get(Calendar.YEAR));
+        whatS = whatEdit.getText().toString();
+        whyS = whyEdit.getText().toString();
+        R8s r8s = new R8s();
+        r8s.setWhat(whatS);
+        r8s.setr8(r8ing);
+        r8s.setWhy(whyS);
+        r8s.setDate(dateSaved);
 
+        DatabaseHandler db = new DatabaseHandler(this);
+        db.addR8s(r8s);
+
+        r8ing = 0;
+        whatEdit.setText("");
+        whyEdit.setText("");
+        scrollRater.smoothScrollTo(zeroText.getLeft() + (zeroText.getWidth() - width)/2,0);
     }
 
     public void clickGoToR8S(View view) {
-//        startActivity(new Intent(this, ListActivity.class));
-//        overridePendingTransition(R.anim.list_anim_enter,R.anim.main_anim);
         Intent intent = new Intent(MainActivity.this,ListActivity.class);
         Bundle bundle = ActivityOptions.makeCustomAnimation(this,R.anim.list_anim_enter,R.anim.main_anim).toBundle();
-//        Bundle bundle = ActivityOptions.makeCustomAnimation(getApplicationContext(),R.anim.list_anim_enter,R.anim.main_anim).toBundle();
         startActivity(intent,bundle);
     }
 

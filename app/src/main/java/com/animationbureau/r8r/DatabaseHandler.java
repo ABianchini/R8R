@@ -7,11 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
-import java.util.List;
 
-/**
- * Created by anima on 6/6/2016.
- */
 public class DatabaseHandler extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
     //database name
@@ -23,6 +19,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String KEY_WHAT = "what";
     private static final String KEY_R8 = "r8";
     private static final String KEY_WHY = "why";
+    private static final String KEY_DATE="date";
 
     public DatabaseHandler(Context context) {
         super(context,DATABASE_NAME,null,DATABASE_VERSION);
@@ -30,7 +27,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CREATE_RATINGS_TABLE = "CREATE TABLE " + TABLE_RATINGS + "("+KEY_ID+" INTEGER PRIMARY KEY,"+KEY_WHAT+" TEXT,"+KEY_R8+" INTEGER,"+KEY_WHY+" TEXT"+")";
+        String CREATE_RATINGS_TABLE = "CREATE TABLE " + TABLE_RATINGS + "("+KEY_ID+" INTEGER PRIMARY KEY,"+KEY_WHAT+" TEXT,"+KEY_R8+" INTEGER,"+KEY_WHY+" TEXT,"+KEY_DATE+" TEXT"+")";
         db.execSQL(CREATE_RATINGS_TABLE);
     }
 
@@ -46,6 +43,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(KEY_WHAT, r8s.getWhat());
         values.put(KEY_R8, r8s.getr8());
         values.put(KEY_WHY, r8s.getWhy());
+        values.put(KEY_DATE, r8s.getDate());
 
         db.insert(TABLE_RATINGS, null, values);
         db.close();
@@ -54,16 +52,16 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public R8s getR8s(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
 
-        Cursor cursor = db.query(TABLE_RATINGS, new String[] {KEY_ID,KEY_WHAT,KEY_R8,KEY_WHY}, KEY_ID+"=?", new String[] {String.valueOf(id)},null,null,null,null);
+        Cursor cursor = db.query(TABLE_RATINGS, new String[] {KEY_ID,KEY_WHAT,KEY_R8,KEY_WHY,KEY_DATE}, KEY_ID+"=?", new String[] {String.valueOf(id)},null,null,null,null);
         if (cursor != null) {
             cursor.moveToFirst();
         }
-        R8s r8s = new R8s(Integer.parseInt(cursor.getString(0)), cursor.getString(1), Integer.parseInt(cursor.getString(2)), cursor.getString(3));
+        R8s r8s = new R8s(Integer.parseInt(cursor.getString(0)), cursor.getString(1), Integer.parseInt(cursor.getString(2)), cursor.getString(3),cursor.getString(4));
         return r8s;
     }
 
-    public List<R8s> getAllR8s() {
-        List<R8s> r8sList = new ArrayList<R8s>();
+    public ArrayList<R8s> getAllR8s() {
+        ArrayList<R8s> r8sList = new ArrayList<R8s>();
         //select all queries
         String selectQuery = "SELECT * FROM "+ TABLE_RATINGS;
 
@@ -77,6 +75,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 r8s.setWhat(cursor.getString(1));
                 r8s.setr8(Integer.parseInt(cursor.getString(2)));
                 r8s.setWhy(cursor.getString(3));
+                r8s.setDate(cursor.getString(4));
 
                 r8sList.add(r8s);
             } while (cursor.moveToNext());
@@ -99,6 +98,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(KEY_WHAT, r8s.getWhat());
         values.put(KEY_R8, r8s.getr8());
         values.put(KEY_WHY,r8s.getWhy());
+        values.put(KEY_DATE,r8s.getDate());
 
         return db.update(TABLE_RATINGS, values, KEY_ID + "=?", new String[] {String.valueOf(r8s.getID())});
     }
@@ -106,6 +106,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public void deleteR8s(R8s r8s) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_RATINGS, KEY_ID+"=?",new String[] {String.valueOf(r8s.getID())});
+        db.close();
+    }
+
+    public void deleteAllR8s() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_RATINGS,null,null);
         db.close();
     }
 }

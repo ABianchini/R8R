@@ -10,8 +10,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ListActivity extends AppCompatActivity {
 
@@ -21,23 +21,14 @@ public class ListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list);
         Toolbar toolbar = (Toolbar) findViewById(R.id.list_toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("R8S");
+        toolbar.setTitle("R8S");
+        //TODO add up button
 
-        final ArrayList<R8s> r8sList = new ArrayList<R8s>();
+        DatabaseHandler db = new DatabaseHandler(this);
 
-        R8s r8s1 = new R8s();
-        r8s1.setID(1);
-        r8s1.setWhat("Harry Potter Ride");
-        r8s1.setr8(-5);
-        r8s1.setWhy("Tween line simulator 2k16");
-        r8sList.add(r8s1);
-        R8s r8s2 = new R8s();
-        r8s2.setID(2);
-        r8s2.setWhat("This App");
-        r8s2.setr8(-2);
-        r8s2.setWhy("I can't take selfies with it.");
-        r8sList.add(r8s2);
+        final ArrayList<R8s> r8sList = db.getAllR8s();
 
+        Collections.reverse(r8sList);
         r8sAdapter adapter = new r8sAdapter(this,r8sList);
         ListView listView = (ListView) findViewById(R.id.list_view);
         listView.setAdapter(adapter);
@@ -45,6 +36,7 @@ public class ListActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 R8s r8s = r8sList.get(position);
+                //TODO add dialog box with details
                 Toast toast = Toast.makeText(getApplicationContext(), r8s.getWhy(), Toast.LENGTH_SHORT);
                 toast.show();
             }
@@ -63,11 +55,18 @@ public class ListActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case android.R.id.home:
-                // app icon in action bar clicked; goto parent activity.
                 this.finish();
                 return true;
             case R.id.deleteR8s:
-                //TODO create "delete all for database" and "reload list"
+                DatabaseHandler db = new DatabaseHandler(this);
+                db.deleteAllR8s();
+
+                final ArrayList<R8s> r8sList = db.getAllR8s();
+                Collections.reverse(r8sList);
+                r8sAdapter adapter = new r8sAdapter(this,r8sList);
+                ListView listView = (ListView) findViewById(R.id.list_view);
+                listView.setAdapter(adapter);
+
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

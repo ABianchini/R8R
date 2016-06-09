@@ -21,9 +21,11 @@ public class r8sAdapter extends ArrayAdapter<R8s> {
         }
         TextView tvWhat = (TextView) convertView.findViewById(R.id.tvWhat);
         TextView tvR8 = (TextView) convertView.findViewById(R.id.tvR8);
+        TextView tvDate = (TextView) convertView.findViewById(R.id.tvDate);
 
         tvWhat.setText(r8s.getWhat());
         tvR8.setText(String.valueOf(r8s.getr8()));
+        tvDate.setText(r8s.getDate());
 
         return convertView;
     }
