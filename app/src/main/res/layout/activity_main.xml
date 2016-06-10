@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:inputType="textCapSentences"
             android:hint="@string/what_string"
-            android:ems="10"
+            android:textColor="#000000"
             android:id="@+id/editTextWhat"
             android:layout_gravity="center_horizontal"
             android:textSize="24sp"
@@ -207,7 +207,8 @@
                 android:id="@+id/editTextWhy"
                 android:textSize="24sp"
                 android:inputType="textCapSentences|textMultiLine|textShortMessage"
-                android:hint="@string/why_string" />
+                android:hint="@string/why_string"
+                android:textColor="#000000"/>
         </ScrollView>
     </LinearLayout>
     <View

@@ -1,0 +1,349 @@
+[
+    {
+        "outputFile": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\build\\intermediates\\res\\merged\\debug\\values-nb\\values-nb.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 139,
+                    "endOffset": 190
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-nb\\values-nb.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 139,
+                        "endOffset": 192
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 195,
+                    "endColumn": 125,
+                    "endOffset": 316
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-nb\\values-nb.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 198,
+                        "endColumn": 125,
+                        "endOffset": 319
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 321,
+                    "endColumn": 124,
+                    "endOffset": 441
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-nb\\values-nb.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 325,
+                        "endColumn": 124,
+                        "endOffset": 445
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 446,
+                    "endColumn": 93,
+                    "endOffset": 535
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-nb\\values-nb.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 451,
+                        "endColumn": 93,
+                        "endOffset": 540
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 540,
+                    "endColumn": 63,
+                    "endOffset": 599
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-nb\\values-nb.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 546,
+                        "endColumn": 63,
+                        "endOffset": 605
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 604,
+                    "endColumn": 68,
+                    "endOffset": 668
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-nb\\values-nb.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 611,
+                        "endColumn": 68,
+                        "endOffset": 675
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 673,
+                    "endColumn": 61,
+                    "endOffset": 730
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-nb\\values-nb.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 681,
+                        "endColumn": 61,
+                        "endOffset": 738
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 735,
+                    "endColumn": 71,
+                    "endOffset": 802
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-nb\\values-nb.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 744,
+                        "endColumn": 71,
+                        "endOffset": 811
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 807,
+                    "endColumn": 73,
+                    "endOffset": 876
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-nb\\values-nb.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 817,
+                        "endColumn": 73,
+                        "endOffset": 886
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 881,
+                    "endColumn": 91,
+                    "endOffset": 968
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-nb\\values-nb.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 892,
+                        "endColumn": 91,
+                        "endOffset": 979
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 973,
+                    "endColumn": 73,
+                    "endOffset": 1042
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-nb\\values-nb.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 985,
+                        "endColumn": 73,
+                        "endOffset": 1054
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1047,
+                    "endColumn": 73,
+                    "endOffset": 1116
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-nb\\values-nb.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1060,
+                        "endColumn": 73,
+                        "endOffset": 1129
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1121,
+                    "endColumn": 84,
+                    "endOffset": 1201
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-nb\\values-nb.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1135,
+                        "endColumn": 84,
+                        "endOffset": 1215
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1206,
+                    "endColumn": 99,
+                    "endOffset": 1301
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-nb\\values-nb.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1221,
+                        "endColumn": 99,
+                        "endOffset": 1316
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1306,
+                    "endColumn": 62,
+                    "endOffset": 1364
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-nb\\values-nb.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1322,
+                        "endColumn": 62,
+                        "endOffset": 1380
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1369,
+                    "endColumn": 62,
+                    "endOffset": 1427
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-nb\\values-nb.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1386,
+                        "endColumn": 62,
+                        "endOffset": 1444
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1432,
+                    "endColumn": 127,
+                    "endOffset": 1555
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-nb\\values-nb.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1450,
+                        "endColumn": 127,
+                        "endOffset": 1573
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1560,
+                    "endColumn": 59,
+                    "endOffset": 1615
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-nb\\values-nb.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1579,
+                        "endColumn": 59,
+                        "endOffset": 1634
+                    }
+                }
+            }
+        ]
+    }
+]

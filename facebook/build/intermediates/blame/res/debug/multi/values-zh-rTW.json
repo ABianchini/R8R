@@ -1,0 +1,349 @@
+[
+    {
+        "outputFile": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\build\\intermediates\\res\\merged\\debug\\values-zh-rTW\\values-zh-rTW.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 92,
+                    "endOffset": 143
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 92,
+                        "endOffset": 145
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 148,
+                    "endColumn": 84,
+                    "endOffset": 228
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 151,
+                        "endColumn": 84,
+                        "endOffset": 231
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 233,
+                    "endColumn": 95,
+                    "endOffset": 324
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 237,
+                        "endColumn": 95,
+                        "endOffset": 328
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 329,
+                    "endColumn": 91,
+                    "endOffset": 416
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 334,
+                        "endColumn": 91,
+                        "endOffset": 421
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 421,
+                    "endColumn": 61,
+                    "endOffset": 478
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 427,
+                        "endColumn": 61,
+                        "endOffset": 484
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 483,
+                    "endColumn": 64,
+                    "endOffset": 543
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 490,
+                        "endColumn": 64,
+                        "endOffset": 550
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 548,
+                    "endColumn": 54,
+                    "endOffset": 598
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 556,
+                        "endColumn": 54,
+                        "endOffset": 606
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 603,
+                    "endColumn": 67,
+                    "endOffset": 666
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 612,
+                        "endColumn": 67,
+                        "endOffset": 675
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 671,
+                    "endColumn": 67,
+                    "endOffset": 734
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 681,
+                        "endColumn": 67,
+                        "endOffset": 744
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 739,
+                    "endColumn": 84,
+                    "endOffset": 819
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 750,
+                        "endColumn": 84,
+                        "endOffset": 830
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 824,
+                    "endColumn": 68,
+                    "endOffset": 888
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 836,
+                        "endColumn": 68,
+                        "endOffset": 900
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 893,
+                    "endColumn": 68,
+                    "endOffset": 957
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 906,
+                        "endColumn": 68,
+                        "endOffset": 970
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 962,
+                    "endColumn": 77,
+                    "endOffset": 1035
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 976,
+                        "endColumn": 77,
+                        "endOffset": 1049
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1040,
+                    "endColumn": 91,
+                    "endOffset": 1127
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1055,
+                        "endColumn": 91,
+                        "endOffset": 1142
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1132,
+                    "endColumn": 60,
+                    "endOffset": 1188
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1148,
+                        "endColumn": 60,
+                        "endOffset": 1204
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1193,
+                    "endColumn": 61,
+                    "endOffset": 1250
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1210,
+                        "endColumn": 61,
+                        "endOffset": 1267
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1255,
+                    "endColumn": 83,
+                    "endOffset": 1334
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1273,
+                        "endColumn": 83,
+                        "endOffset": 1352
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1339,
+                    "endColumn": 57,
+                    "endOffset": 1392
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-zh-rTW\\values-zh-rTW.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1358,
+                        "endColumn": 57,
+                        "endOffset": 1411
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,349 @@
+[
+    {
+        "outputFile": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\build\\intermediates\\res\\merged\\debug\\values-tr\\values-tr.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 136,
+                    "endOffset": 187
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-tr\\values-tr.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 136,
+                        "endOffset": 189
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 192,
+                    "endColumn": 107,
+                    "endOffset": 295
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-tr\\values-tr.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 195,
+                        "endColumn": 107,
+                        "endOffset": 298
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 300,
+                    "endColumn": 116,
+                    "endOffset": 412
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-tr\\values-tr.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 304,
+                        "endColumn": 116,
+                        "endOffset": 416
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 417,
+                    "endColumn": 95,
+                    "endOffset": 508
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-tr\\values-tr.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 422,
+                        "endColumn": 95,
+                        "endOffset": 513
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 513,
+                    "endColumn": 67,
+                    "endOffset": 576
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-tr\\values-tr.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 519,
+                        "endColumn": 67,
+                        "endOffset": 582
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 581,
+                    "endColumn": 68,
+                    "endOffset": 645
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-tr\\values-tr.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 588,
+                        "endColumn": 68,
+                        "endOffset": 652
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 650,
+                    "endColumn": 62,
+                    "endOffset": 708
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-tr\\values-tr.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 658,
+                        "endColumn": 62,
+                        "endOffset": 716
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 713,
+                    "endColumn": 70,
+                    "endOffset": 779
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-tr\\values-tr.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 722,
+                        "endColumn": 70,
+                        "endOffset": 788
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 784,
+                    "endColumn": 74,
+                    "endOffset": 854
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-tr\\values-tr.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 794,
+                        "endColumn": 74,
+                        "endOffset": 864
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 859,
+                    "endColumn": 92,
+                    "endOffset": 947
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-tr\\values-tr.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 870,
+                        "endColumn": 92,
+                        "endOffset": 958
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 952,
+                    "endColumn": 75,
+                    "endOffset": 1023
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-tr\\values-tr.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 964,
+                        "endColumn": 75,
+                        "endOffset": 1035
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1028,
+                    "endColumn": 75,
+                    "endOffset": 1099
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-tr\\values-tr.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1041,
+                        "endColumn": 75,
+                        "endOffset": 1112
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1104,
+                    "endColumn": 81,
+                    "endOffset": 1181
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-tr\\values-tr.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1118,
+                        "endColumn": 81,
+                        "endOffset": 1195
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1186,
+                    "endColumn": 102,
+                    "endOffset": 1284
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-tr\\values-tr.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1201,
+                        "endColumn": 102,
+                        "endOffset": 1299
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1289,
+                    "endColumn": 64,
+                    "endOffset": 1349
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-tr\\values-tr.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1305,
+                        "endColumn": 64,
+                        "endOffset": 1365
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1354,
+                    "endColumn": 65,
+                    "endOffset": 1415
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-tr\\values-tr.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1371,
+                        "endColumn": 65,
+                        "endOffset": 1432
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1420,
+                    "endColumn": 126,
+                    "endOffset": 1542
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-tr\\values-tr.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 1438,
+                        "endColumn": 126,
+                        "endOffset": 1560
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1547,
+                    "endColumn": 61,
+                    "endOffset": 1604
+                },
+                "from": {
+                    "file": "C:\\Users\\anima\\AndroidStudioProjects\\R8R\\facebook\\src\\main\\res\\values-tr\\values-tr.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 1566,
+                        "endColumn": 61,
+                        "endOffset": 1623
+                    }
+                }
+            }
+        ]
+    }
+]
