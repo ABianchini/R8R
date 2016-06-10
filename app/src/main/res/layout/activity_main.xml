@@ -221,6 +221,24 @@
         android:layout_height="wrap_content"
         android:gravity="center|bottom"
         android:orientation="horizontal" >
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/post_string"
+            android:textSize="24sp"
+            android:id="@+id/buttonPost"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            style="?android:attr/buttonBarButtonStyle"
+            android:onClick="clickPost"
+            android:textColor="#000000"
+            tools:ignore="NestedWeights" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#9c000000"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
 
         <Button
             android:layout_width="fill_parent"

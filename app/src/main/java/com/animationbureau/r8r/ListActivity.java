@@ -9,7 +9,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -18,9 +17,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class ListActivity extends AppCompatActivity {
-    String whatS = "";
-    String whyS = "";
-    int r8ing = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +28,6 @@ public class ListActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         final DatabaseHandler db = new DatabaseHandler(this);
-
         final ArrayList<R8s> r8sList = db.getAllR8s();
         Collections.reverse(r8sList);
         r8sAdapter adapter = new r8sAdapter(this,r8sList);

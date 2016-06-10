@@ -1,5 +1,3 @@
-//TODO make all this shit pretty, colors and all (figure out this theme shit)
-//TODO add swipe gesture detection to go to R8S
 package com.animationbureau.r8r;
 
 import android.app.ActivityOptions;
@@ -9,12 +7,16 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Handler;
+import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.util.TypedValue;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
@@ -45,14 +47,18 @@ public class MainActivity extends AppCompatActivity {
     EditText whyEdit;
     HorizontalScrollView scrollRater;
 
+    private GestureDetectorCompat mDetector;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.main_toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setIcon(R.mipmap.r8r_launcher);
+        getSupportActionBar().setIcon(R.drawable.ic_action_r8r);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        mDetector = new GestureDetectorCompat(this, new MyGestureListener());
 
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
@@ -146,6 +152,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        this.mDetector.onTouchEvent(event);
+        return super.onTouchEvent(event);
+    }
+
+    class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
+        @Override
+        public boolean onFling(MotionEvent event1, MotionEvent event2, float velX, float velY) {
+            if (velX < 0) {
+                Intent intent = new Intent(MainActivity.this,ListActivity.class);
+                Bundle bundle = ActivityOptions.makeCustomAnimation(getApplicationContext(),R.anim.list_anim_enter,R.anim.main_anim).toBundle();
+                startActivity(intent,bundle);
+            }
+            return true;
+        }
+    }
+
+    @Override
     protected void onStop() {
         super.onStop();
         SharedPreferences sharedPref =  this.getPreferences(Context.MODE_PRIVATE);
@@ -201,7 +225,11 @@ public class MainActivity extends AppCompatActivity {
         whyEdit.setText("");
         scrollRater.smoothScrollTo(zeroText.getLeft() + (zeroText.getWidth() - width)/2,0);
     }
-    //TODO add a post button and all that FB shit
+
+    public void clickPost(View view) {
+        //TODO add a post button and all that FB shit
+    }
+
     public void clickSaveR8(View view) {
         Calendar c = Calendar.getInstance();
         String dateSaved = Integer.toString(c.get(Calendar.MONTH)+1)+"/"+Integer.toString(c.get(Calendar.DAY_OF_MONTH))+"/"+Integer.toString(c.get(Calendar.YEAR));
