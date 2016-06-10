@@ -2,7 +2,8 @@
 <resources>
     <color name="primary_text_default_material_light">#d6d7d7</color>
     <color name="primary_dark_material_light">#851919</color>
-    <color name="primary_material_light_now">#a23636</color>
-    <color name="primary_dark_material_light_now">#751111</color>
+    <color name="primary_material_light_now">#d32f2f</color>
+    <color name="primary_dark_material_light_now">#b71c1c</color>
     <color name="primary_text_default_material_light_now">#dec3c3c3</color>
+    <color name="accent_material_light_now">#e57373</color>
 </resources>

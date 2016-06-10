@@ -6,5 +6,5 @@
     <color name="r8rColorPrimary">#f3be2f2f</color>
     <color name="r8rColorPrimaryDark">#802626</color>
     <color name="r8rWindowBG">#FFFAFAFA</color>
-    <color name="primary_text_material_light_now">#de000000</color>
+    <color name="primary_text_material_light_now">#fafafa</color>
 </resources>
