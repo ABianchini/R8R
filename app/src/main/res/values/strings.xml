@@ -20,5 +20,6 @@
     <string name="selector_bottom_string">Selector Bottom</string>
     <string name="save_string">SAVE</string>
     <string name="R8S_string">R8S</string>
-    <string name="post_string">POST</string>
+    <string name="post_string">SHARE</string>
+    <string name="facebook_app_id">835873759851454</string>
 </resources>

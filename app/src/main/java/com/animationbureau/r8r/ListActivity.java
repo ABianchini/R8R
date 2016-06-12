@@ -17,6 +17,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class ListActivity extends AppCompatActivity {
+    ListView listView;
+    ArrayList<R8s> r8sList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,15 +30,17 @@ public class ListActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         final DatabaseHandler db = new DatabaseHandler(this);
-        final ArrayList<R8s> r8sList = db.getAllR8s();
+        r8sList = db.getAllR8s();
         Collections.reverse(r8sList);
         r8sAdapter adapter = new r8sAdapter(this,r8sList);
-        ListView listView = (ListView) findViewById(R.id.list_view);
+        listView = (ListView) findViewById(R.id.list_view);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                final R8s r8s = r8sList.get(position);
+                r8sList = db.getAllR8s();
+                Collections.reverse(r8sList);
+                R8s r8s = r8sList.get(position);
                 detailsDialog(r8s);
             }
         });
@@ -60,7 +64,7 @@ public class ListActivity extends AppCompatActivity {
                 final ArrayList<R8s> r8sList = db.getAllR8s();
                 final r8sAdapter adapter = new r8sAdapter(getApplicationContext(),r8sList);
                 Collections.reverse(r8sList);
-                final ListView listView = (ListView) findViewById(R.id.list_view);
+                listView = (ListView) findViewById(R.id.list_view);
                 listView.setAdapter(adapter);
                 dialog.cancel();
             }

@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.animationbureau.r8r">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <uses-sdk
         android:minSdkVersion="19"
         android:targetSdkVersion="23" />
+
+    <provider android:authorities="com.facebook.app.FacebookContentProvider835873759851454"
+        android:name="com.facebook.FacebookContentProvider"
+        android:exported="true"/>
 
     <application
         android:allowBackup="true"
@@ -14,11 +19,10 @@
         android:theme="@style/r8rTheme">
         <activity android:name="com.animationbureau.r8r.MainActivity"
             android:screenOrientation="portrait">
+            <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
-
             </intent-filter>
         </activity>
 
@@ -30,6 +34,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.animationbureau.r8r.MainActivity" />
         </activity>
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name" />
     </application>
 
 </manifest>
