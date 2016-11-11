@@ -64,6 +64,7 @@ public class R8s {
     public String getDate() {
         return this._date;
     }
+
     public void setDate(String date) {
         this._date = date;
     }

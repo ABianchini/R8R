@@ -1,6 +1,7 @@
 package com.animationbureau.r8r;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,6 +29,7 @@ public class ListActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         toolbar.setTitle("R8S");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setTitle("R8S");
 
         final DatabaseHandler db = new DatabaseHandler(this);
         r8sList = db.getAllR8s();
@@ -57,7 +59,20 @@ public class ListActivity extends AppCompatActivity {
                 dialog.cancel();
             }
         });
-        builder.setNegativeButton("Delete", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("Share", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                String whyS = r8s.getWhy();
+                String whatS = r8s.getWhat();
+                int r8ing = r8s.getr8();
+
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, whatS+" (R8: "+Integer.toString(r8ing)+")\n"+whyS);
+                sendIntent.setType("text/plain");
+                startActivity(Intent.createChooser(sendIntent,"WAWAWEEWU"));
+            }
+        });
+        builder.setNeutralButton("Delete", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 db.deleteR8s(r8s);
 

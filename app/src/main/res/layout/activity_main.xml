@@ -232,7 +232,9 @@
             android:layout_weight="1"
             style="?android:attr/buttonBarButtonStyle"
             android:textColor="#000000"
-            tools:ignore="NestedWeights" />
+            tools:ignore="NestedWeights"
+            android:onClick="clickShareR8"/>
+
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"

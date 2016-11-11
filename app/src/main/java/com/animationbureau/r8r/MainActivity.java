@@ -6,7 +6,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
-import android.net.Uri;
 import android.os.Handler;
 import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AlertDialog;
@@ -15,19 +14,12 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import com.facebook.CallbackManager;
-import com.facebook.FacebookCallback;
-import com.facebook.FacebookException;
-import com.facebook.FacebookSdk;
-import com.facebook.appevents.AppEventsLogger;
-import com.facebook.share.Sharer;
-import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.widget.ShareDialog;
 import android.util.TypedValue;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.HorizontalScrollView;
 import android.widget.TextView;
@@ -68,25 +60,6 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setIcon(R.drawable.ic_action_r8r);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-
-        FacebookSdk.sdkInitialize(getApplicationContext());
-        AppEventsLogger.activateApp(getApplication());
-        callbackManager = CallbackManager.Factory.create();
-        shareDialog = new ShareDialog(this);
-        shareDialog.registerCallback(callbackManager, new FacebookCallback<Sharer.Result>() {
-            @Override
-            public void onSuccess(Sharer.Result result) {}
-            @Override
-            public void onCancel() {}
-            @Override
-            public void onError(FacebookException error) {}
-        });
-        Button shareButton = (Button) findViewById(R.id.buttonPost);
-        shareButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            }
-        });
 
         mDetector = new GestureDetectorCompat(this, new MyGestureListener());
 
@@ -262,7 +235,16 @@ public class MainActivity extends AppCompatActivity {
         scrollRater.smoothScrollTo(zeroText.getLeft() + (zeroText.getWidth() - width)/2,0);
     }
 
-    //TODO add a post button and all that FB shit
+    public void clickShareR8(View view) {
+        whatS = whatEdit.getText().toString();
+        whyS = whyEdit.getText().toString();
+
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, whatS+" (R8: "+Integer.toString(r8ing)+")\n"+whyS);
+        sendIntent.setType("text/plain");
+        startActivity(Intent.createChooser(sendIntent,"WAWAWEEWU"));
+    }
 
     public void clickSaveR8(View view) {
         Calendar c = Calendar.getInstance();
