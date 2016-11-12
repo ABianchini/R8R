@@ -27,9 +27,9 @@ public class ListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list);
         Toolbar toolbar = (Toolbar) findViewById(R.id.list_toolbar);
         setSupportActionBar(toolbar);
-        toolbar.setTitle("R8S");
+//        toolbar.setTitle("R8S");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        getSupportActionBar().setTitle("R8S");
+        getSupportActionBar().setTitle("R8S");
 
         final DatabaseHandler db = new DatabaseHandler(this);
         r8sList = db.getAllR8s();
@@ -69,7 +69,7 @@ public class ListActivity extends AppCompatActivity {
                 sendIntent.setAction(Intent.ACTION_SEND);
                 sendIntent.putExtra(Intent.EXTRA_TEXT, whatS+" (R8: "+Integer.toString(r8ing)+")\n"+whyS);
                 sendIntent.setType("text/plain");
-                startActivity(Intent.createChooser(sendIntent,"WAWAWEEWU"));
+                startActivity(Intent.createChooser(sendIntent,"Share your R8:"));
             }
         });
         builder.setNeutralButton("Delete", new DialogInterface.OnClickListener() {

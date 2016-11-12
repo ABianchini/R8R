@@ -13,8 +13,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
-import com.facebook.CallbackManager;
-import com.facebook.share.widget.ShareDialog;
 import android.util.TypedValue;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -49,8 +47,6 @@ public class MainActivity extends AppCompatActivity {
     HorizontalScrollView scrollRater;
 
     private GestureDetectorCompat mDetector;
-    CallbackManager callbackManager;
-    ShareDialog shareDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -153,12 +149,12 @@ public class MainActivity extends AppCompatActivity {
             }
         },500);
     }
-
-    @Override
-    protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        callbackManager.onActivityResult(requestCode, resultCode, data);
-    }
+//
+//    @Override
+//    protected void onActivityResult(final int requestCode, final int resultCode, final Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        callbackManager.onActivityResult(requestCode, resultCode, data);
+//    }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -243,7 +239,7 @@ public class MainActivity extends AppCompatActivity {
         sendIntent.setAction(Intent.ACTION_SEND);
         sendIntent.putExtra(Intent.EXTRA_TEXT, whatS+" (R8: "+Integer.toString(r8ing)+")\n"+whyS);
         sendIntent.setType("text/plain");
-        startActivity(Intent.createChooser(sendIntent,"WAWAWEEWU"));
+        startActivity(Intent.createChooser(sendIntent,"Share your R8:"));
     }
 
     public void clickSaveR8(View view) {
