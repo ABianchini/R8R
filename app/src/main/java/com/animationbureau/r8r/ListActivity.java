@@ -1,5 +1,6 @@
 package com.animationbureau.r8r;
 
+import android.app.ActivityOptions;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
@@ -126,7 +127,10 @@ public class ListActivity extends AppCompatActivity {
                 AlertDialog r8ingDetails = builder.create();
                 r8ingDetails.show();
                 return true;
-
+            case R.id.showChart:
+                Intent intent = new Intent(ListActivity.this,AnalyticsActivity.class);
+                startActivity(intent);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

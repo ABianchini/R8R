@@ -2,6 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/showChart"
+        android:icon="@drawable/ic_chart"
+        app:showAsAction="always"
+        android:title="Show Analytics"/>
+    <item
         android:id="@+id/deleteR8s"
         android:icon="@drawable/ic_delete"
         app:showAsAction="always"
